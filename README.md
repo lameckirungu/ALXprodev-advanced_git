@@ -1,0 +1,58 @@
+# Git-Flows
+<p><em>Git-Flow</em> is a branching model for Git, proposed by Vincent Driessen, that helps developers manage features, releases, and hotfixes in a consistent and scalable way. It introduces well-defined roles for branches and helps teams coordinate code changes more effectively. Git-Flow is particularly beneficial for large-scale projects where multiple developers work simultaneously on various aspects of the codebase.</p>
+
+Git-Flow revolves around five primary branch types:
+ - `main` (or `master`) - production-ready code.
+ - `develop` - ongoing development.
+ - `feature/*` - new features in progress.
+ - `release/*` - preparation for production releases.
+ - `hotfix/*` - critical bug fixes on the main branch
+
+ ### Learning Objectives
+ - Understand the purpose and structure of Git-Flow
+ - Identify the different branch types and their roles.
+ - Apply Git-Flow in real-world collaborative development projects.
+ - Manage feature development, hotfixes, and release cycles using Git best practices.
+
+ ### Git Flow Best Practices
+ ---------------------------
+ | Best Practices | Description | 
+ | ---- | ---- |
+| **Start with `develop `**| Always branch off of `develop` for new features, not `main`|
+| **Feature Isolation**| Keep each feature in its own branch to reduce merge conflicts.|
+| **Merge via Pull Requests**| Use pull/merge requests for all merges to ensure code review.|
+| **Keep `main` clean**| Only production-ready code goes into `main`. Never push untested code here.|
+| **Tag Releases**| Use Git tags on the `main` branch to mark official release points.|
+| **Use `hotfix/*` for urgent bugs**| Apply emergency fixes directly to main via a `hotfix/*` branch and merge them back into `develop`.
+| **Document your workflow**| Maintain clear documentation of your Git-Flow in your project's README or internal wiki.|
+------------------------------
+
+### Common Git-Flow Commands
+```bash
+git flow init                   # Initialize Git-Flow
+git flow feature start <name>  # Start a new feature branch
+git flow feature finish <name> # Finish feature and merge into develop
+git flow release start <x.x.x> # Start a release branch
+git flow release finish <x.x.x> # Merge release into main and develop
+git flow hotfix start <x.x.x>  # Start a hotfix branch
+git flow hotfix finish <x.x.x> # Finish hotfix and merge into main & develop
+```
+
+### Tasks
+0. Setting up gitflow
+*Objective:* Understand and initialize a GitFlow workflow.
+*Instruction:*
+```md
+- Install git-flow if not already installed. Steps [here][1]. 
+- Create an empty repository `ALXprodev-advanced_git`.
+- Clone your repository to have it available locally.
+- Create a branch develop
+- Push the develop branch to the remote repository
+- Initialize Git Flow within the repository using default settings i.e `git-flow init [-d]`
+- Create an empty README.md file
+- Commit your file to staging and Push
+
+[1]: [https://skoch.github.io/Git-Workflow/]
+```
+
+
